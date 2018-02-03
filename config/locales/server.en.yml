@@ -297,6 +297,7 @@ en:
       doge: DOGE
       pts: PTS
       ltc: LTC
+      usd: USD
   currency:
     satoshi:
       key: BTC
@@ -328,6 +329,11 @@ en:
       code: PTS
       name: Protoshare
       format: '0,0.0000'
+    usd:
+      key: USD
+      code: USD
+      name: American Dollar
+      format: '0,0.00'
   datagrid:
     empty: no data found
     filters:
