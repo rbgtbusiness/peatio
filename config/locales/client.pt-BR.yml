@@ -1,0 +1,184 @@
+pt-BR:
+  js:
+    brand: Peatio
+    submit: Enviar
+    cancel: Cancelar
+    confirm: Confirmar
+    banks:
+      bra: "Banco Bradesco S.A."
+      bb: "Banco do Brasil S.A."
+      sant: "Banco Santander (Brasil) S.A."
+      hsbc: "HSBC Bank Brasil S.A. - Banco Múltiplo"
+      ita: "Itaú Unibanco S.A."
+      cit: "Banco Citibank S.A."
+      orig: "Banco Original S.A."
+      cef: "Caixa Economica Federal"
+      sof: "Banco Sofisa"
+      int: "Banco Intermedium"
+      neo: "Banco Neon"
+      coob: "Bancoob - Banco Cooperativo do Brasil S.A."
+      sicr: "Banco Sicredi"
+    fund_sources:
+      manage_bank_account: Cadastro de contas favoritas
+      manage_bank_account_desc: Por favor, cadastre aqui as contas bancarias que serao utilizadas para depositos resgates em Reais
+      manage_bank_account_alert: A informacao do seu CPF e' indispensavel para RESGATE em Reais.
+      manage_coin_address: Cadastro de carteiras favoritas
+      manage_coin_address_desc: Por favor, cadastre aqui o endereço de suas carteiras favoritas para resgate de BTCs
+      bank: Banco
+      account: "Conta (CPF/Agencia/Conta-dig)"
+      label: Apelido
+      address: Endereço
+      action: Ação
+      add: Adicionar
+      remove: Remover
+      default: Padrão
+    funds:
+      deposit: Depósito
+      withdraw: Resgate
+      currency_name:
+        usd: USD
+        btc: BTC
+      deposit_usd:
+        title: Depósito em Dolar Americano
+        desc: "Para depósito via transferência bancária, siga os passos abaixo:"
+        desc_item_1: "1. Preencha o formulário abaixo com os dados de sua conta, o valor do depósito e clique no botão Enviar. (Utilize a opção <Cadastrar favoritos>)."
+        desc_item_2: "2. Transfira o dinheiro para a conta da exchange (Os dados estão descritos abaixo)"
+        desc_item_3: "3. Seu depósito será confirmado assim que o dinheiro for recebido em nossa conta-corrente."
+        attention: "Atenção: O nome do seu banco deve ser o mesmo do cadastrado em sua conta em nosso site, caso contrário seu depósito não será corretamente identificado."
+        from: De
+        to: Para
+        deposit_name: Seu nome
+        deposit_account: Conta de depósito
+        add: Adicionar
+        manage: Cadastrar favoritos
+        amount: Valor de depósito
+        min_amount: Valor mínimo 5 Reais.
+        to_account: Conta
+        to_name: Razão Social
+        to_bank_name: Nome do Banco
+        opening_bank_name: CNPJ
+        remark: 'Código Referência (Código de Identificação da Transferência)'
+
+
+      deposit_btc:
+        title: BTC Depósito
+
+      deposit_coin:
+        address: Endereço
+        new_address: Novo Endereço
+        confirm_gen_new_address: Tem certeza que deseja gerar um novo endereço para depósito ? 
+        open-wallet: Por favor use seu serviço de carteira BTC, Carteira Local, Carteira Mobile or Carteira Online, Selecione enviar pagamento e Envie.
+        detail: Por favor cole o endereço abaixo em sua carteira, e preencha o valor que deseja depositar, então confirme e Envie.
+        scan-qr: Leia o QR code para efetuar o pagamento usando sua carteira mobile.
+        after_deposit: Assim que completar o envio, você poderá checar o status do seu depósito abaixo. 
+        generate-new: Gerar novo Endereço
+
+      deposit_history:
+        title: Histórico de Depósitos
+        number: '#'
+        identification: Identificação
+        time: Horário
+        txid: ID da Transação
+        confirmations: Confirmações
+        from: De
+        amount: Valor
+        state_and_action: "Status/Ação"
+        cancel: cancelar
+        no_data: Não há dados históricos
+
+        submitting: Submetendo
+        cancelled: Cancelado
+        submitted: Submetido
+        accepted: Aceito
+        rejected: Rejeitado
+        checked: Checado
+        warning: Alerta
+        suspect: Suspeito
+
+      withdraw_cny:
+        title: Resgate em Reais - Brasil 
+        intro: Selecione o banco para resgate do valor e entre com o número da conta corrente para completar o envio.
+        intro_2: Sua conta corrente e nome devem ser consistentes com seu nome real cadastrado em nosso site.
+        attention: "Horário Comercial: 9:00 - 18:00"
+        account_name: Nome da Conta
+        withdraw_address: Conta destino
+        balance: Saldo (R$)
+        withdraw_amount: Valor de Resgate (R$)
+        manage_withdraw: Contas favoritas
+        fee_explain: Sobre as taxas
+        min: no mínimo
+        withdraw_all: Resgatar tudo
+
+      withdraw_usd:
+        title: Resgate em Dolares Americano 
+        intro: Selecione o banco para resgate do valor e entre com o número da conta corrente para completar o envio.
+        intro_2: Sua conta corrente e nome devem ser consistentes com seu nome real cadastrado em nosso site.
+        attention: "Horário Comercial: 9:00 - 18:00"
+        account_name: Nome da Conta
+        withdraw_address: Conta destino
+        balance: Saldo (R$)
+        withdraw_amount: Valor de Resgate (R$)
+        manage_withdraw: Contas favoritas
+        fee_explain: Sobre as taxas
+        min: no mínimo
+        withdraw_all: Resgatar tudo
+
+      withdraw_btc:
+        title: BTC Resgate
+
+      withdraw_coin:
+        intro: Por favor preencha o endereço e a quantia, então submeta o formulário. Ele será confirmado em 10 minutos
+        label: Apelido
+        balance: BTC disponível
+        amount: Quantidade resgate
+        manage_withdraw: Endereços favoritos 
+        min: no mínimo 
+        withdraw_all: Resgatar tudo
+        fee_explain: Sobre as taxas
+
+      withdraw_history:
+        title: Histórico de Resgates
+        number: Número
+        withdraw_time: Horário
+        withdraw_account: Conta de Resgate 
+        withdraw_address: Endereço
+        withdraw_amount: Valor
+        actual_amount: Valor Atual
+        fee: Taxa
+        miner_fee: Taxa
+        state_and_action: "Status/Ação"
+        cancel: Cancelar
+        no_data: Não há dados históricos
+
+        submitting: Submetendo
+        submitted: Submetido
+        rejected: Rejeitado
+        accepted: Aceito
+        suspect: Suspeito
+        processing: Processando
+        coin_ready: Moeda Pronto
+        coin_done: Moeda Feito
+        done: Feito
+        almost_done: Quase feito
+        canceled: Cancelado
+        failed: Falhou
+
+    auth:
+      please_active_two_factor: Por favor informe seu telefone celular ou ative a autenticação de 2 fatores (use google authenticator).
+      submit: Submeter
+      otp_placeholder: Senha de 6 dígitos
+      google_app: Google Authenticator
+      sms: SMS Mensagem de Verificação
+      send_code: Enviar Código
+      send_code_alt: Reenviar em COUNT Segundos
+      hints:
+        app: Google Authenticator irá regerar uma nova senha a cada 30 segundos, Entre em tempo.
+        sms: Enviaremos uma mensagem de texto para seu telefone com um código de verificação.
+
+    markets:
+      market_list:
+        all: Todos
+        cny: Mercado CNY
+        btc: Mercado BTC
+        usd: Mercado USD 
+

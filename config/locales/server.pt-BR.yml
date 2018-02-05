@@ -1,0 +1,1847 @@
+pt-BR:
+  activerecord:
+    models:
+      api_tokens: API Token
+      trade: Negócios
+      order: Ordens
+      order_bid: Compra
+      order_ask: Venda
+      document: Documento
+      withdraw: Resgate
+      deposit: Depósito
+      payment_transaction: Pagamento
+      id_document: ID Documento
+      statistic/orders_grid: Status Ordens
+      statistic/trades_grid: Status dos Negócios
+      statistic/members_grid: Status dos Membros
+      statistic/deposits_grid: Status dos Depósitos
+      statistic/withdraws_grid: Status dos Resgates
+      admin/deposits_grid: Depósitos
+      admin/withdraws_grid: Resgates
+      deposits/bank: Banco de Depósito
+      withdraws/bank: Banco de Resgate
+      withdraws/satoshi: Resgate
+    attributes:
+      api_token:
+        access_key: Código de Acesso
+        trusted_ip_list: IP Autorizados
+        ip_whitelist: IP Autorizados
+        label: Rótulo
+        actions: Ações
+      identity:
+        email: Email
+        password: Nova Senha
+        password_confirmation: Confirme Nova Senha
+      document:
+        zh_cn_body: conteúdo 
+        zh_cn_title: Título 
+        zh_cn_desc: Descrição 
+        zh_cn_keywords: Palavra chave 
+        en_body: Conteúdo
+        en_title: Título
+        en_desc: Descrição
+        en_keywords: Palavra chave
+        key: Chave
+        is_auth: Autenticado
+      fund_source:
+        address: Endereço
+        category: Categoria
+        label: Apelido
+      account:
+        currency: Moeda
+        currency_text: Moeda
+        balance_and_locked: Saldo / Bloqueado
+        balance: Saldo
+        locked: Bloqueado
+      deposit:
+        state: Status
+        tx_id: TxID
+        member_id: ID Membro
+        created_at: Submetido por
+        address: Endereço
+        amount: Valor
+        done_at: Confirmado as
+        sn: SN
+      withdraw:
+        id: ID
+        sn: SN
+        withdraw_id: ID
+        created_at: Criado por
+        done_at: Feito as
+        sum: Soma
+        fee: Taxa
+        currency: Moeda
+        amount: Valor
+        address: Endereço
+        state: Status
+        state_text: Status
+        tx_id: TxID
+        fund_source_id: Endereço de Resgate
+        detail: Detalhe
+      account_version:
+        id: ID
+        locked: Bloqueado
+        amount: Valor
+        balance: Saldo
+        reason: Razão
+        reason_text: Razão
+        modifiable_id: LINK ID
+        modifiable_type: LINK
+        created_at: Criado por
+        in: Entrada
+        out: Custos
+        fee: Taxa
+      token/reset_password:
+        email: Conta email
+        member: Membro
+      trade:
+        bid: Compra
+        ask: Venda
+        fee: Taxa
+        price: Preço de Strike 
+        volume: Volume de Strike 
+        category: Compra/Venda
+        order: Ordem
+      order:
+        bid: Compra
+        ask: Venda
+        price: Preço
+        total: Total
+        volume: Volume
+        origin_volume: Volume
+        sum: Soma
+        category: Compra/Venda
+        kind: Tipo
+        at: At
+        id: ID
+        state: Status
+        operation: Operação
+      payment_transaction:
+        at: Data Horário
+        txid: ID da Transação 
+        amount: Valor
+        confirmations: Confirmações
+        state: Status
+        state_done: Feito
+        state_wait: Espere
+      member:
+        id: ID
+        name: Nome Real
+        display_name: Nome apresentado
+        email: Email
+        created_at: Registrado por
+        sn: SN
+        id_document_number: Id Número do Documento
+        tag_list: Tags
+        activated: Ativado
+        activated?: "Ativado?"
+        id_document_verified?: "Id documento verificado?"
+        two_factor_activated?: "Dois fatores ativados?"
+        phone_number: Número de Telefone
+      two_factor/sms:
+        country: País
+        phone_number: Número de Telefone
+        otp: Código de Verificação
+      withdraws/bank:
+        id: ID
+        member_name: Membro
+        currency_obj_key_text: Moeda
+        state_and_actions: Status/Ação
+        fund_source: Banco
+        fund_extra: Banco
+        fund_extra_text: Banco
+        fund_uid: Conta Bancária
+        sum: Valor
+        fee: Taxa
+        amount: Valor
+        remark: Observação
+        created_at: Criado as
+      deposits/bank:
+        created_at: Criado as
+        holder: Titular
+        fund_extra: Banco Origem
+        fund_uid: Conta Origem
+        member_sn: Membro SN
+        member_name: Nome do Remetente
+        amount: Valor
+        sn: SN
+        state_and_action: Status/Ação
+        label: Rótulo
+        fund_source: Fundo Origem
+      deposits/satoshi:
+        created_at: Criado as
+        txid: ID da Transação
+        amount: Valor
+        confirmations: Confirmação
+        aasm_state_text: Status
+      withdraws/satoshi:
+        id: ID
+        member_name: Conta
+        currency_obj_key_text: Moeda
+        state_and_actions: Status/Ação
+        fund_extra_text: Rótulo de Resgate 
+        fund_extrat: Rótulo de Resgate
+        fund_source: Banco
+        fund_uid: Conta
+        created_at: Criado as 
+        sum: Valor
+        amount: Valor
+        remark: Observação
+        fee: Taxa
+    errors:
+      models:
+        order_bid:
+          attributes:
+            sum:
+              expensive: Conta
+            price:
+              range: Faixa de Preço inválida
+        order_ask:
+          attributes:
+            origin_volume:
+              expensive: Conta
+            price:
+              range: Faixa de preço inválida
+        account:
+          attributes:
+            balance:
+              less: equilíbrio Menos
+        identity:
+          attributes:
+            email:
+              invalid: Email Inválido
+            password:
+              invalid: Senha inválida
+            password_confirmation:
+              confirmation: Inconsistente com a nova senha que entrou, por favor redigite.
+        token/reset_password:
+          attributes:
+            base:
+              too_soon: Visita muito cedo, Por favor tente mais tarde.
+            email:
+              not-member: Email Inválido
+              match: Email inválido
+            password:
+              invalid: Senha Inválida
+            member:
+              blank: Não existe!
+        activation:
+          attributes:
+            base:
+              too_soon: Um email de ativação foi enviado para seu endereço há menos de 5 minutos. 
+        fund_source:
+          attributes:
+            address:
+              satoshi_ismine: Endereço utilizado
+              satoshi_invalid: Endereço inválido
+        withdraw:
+          account_balance_is_poor: Saldo em conta insuficiente
+          attributes:
+            password:
+              match: Inválido
+            amount:
+              poor: Insuficiente
+              bank_min: menos 5000.00
+        withdraws/satoshi:
+          attributes:
+            fund_uid:
+              blank: Por favor entre com seu endereço de resgate
+              invalid: Endereço de resgate inválido, Revise por favor.
+              ismine: Por favor use um novo endereço.
+        two_factor:
+          attributes:
+            otp:
+              invalid: Senha incorreta! Por favor redigite.
+        application:
+          attributes:
+            redirect_uri:
+              fragment_present: não pode conter um fragmento.
+              invalid_uri: Deve ser uma URI válida.
+              relative_uri: deve ser um URI absoluto.
+      messages:
+        invalid_email: Endereço de email inválido
+        undef: Razão desconhecida
+        less: Saldo menor
+        verify: Verifique erro
+        strength: tamanho de senha inválido
+        password: Por favor entre com uma senha com no mínimo 6 caracteres e melhor se tiver letras maiúsculas, minúsculas e números.
+        orders:
+          price: Preço limite %{l} ~ %{h}
+          sum: Preço somado limite %{l} ~ %{h}
+          precision: precisão mínima %{p}
+  banks:
+      bra: "Banco Bradesco S.A."
+      bb: "Banco do Brasil S.A."
+      sant: "Banco Santander (Brasil) S.A."
+      hsbc: "HSBC Bank Brasil S.A. - Banco Múltiplo"
+      ita: "Itaú Unibanco S.A."
+      cit: "Banco Citibank S.A."
+      orig: "Banco Original S.A."
+      cef: "Caixa Economica Federal"
+      sof: "Banco Sofisa"
+      int: "Banco Intermedium"
+      neo: "Banco Neon"
+      coob: "Bancoob - Banco Cooperativo do Brasil S.A."
+      sicr: "Banco Sicredi"
+  market:
+    currency:
+      btc: BTC
+      cny: CNY
+      doge: DOGE
+      pts: PTS
+      ltc: LTC
+      usd: USD
+  currency:
+    satoshi:
+      key: BTC
+      code: BTC
+      name: Bitcoin
+      format: '0,0.0000'
+    bitsharesx:
+      key: BTS
+      code: BTSX
+      name: BitsharesX
+      format: '0,0.0000'
+    renminbi:
+      key: BRL
+      code: BRL
+      name: Reais Brasileiros
+      format: '0,0.00'
+    dogecoin:
+      key: DOG
+      code: DOGE
+      name: Dogecoin
+      format: '0,0.0000'
+    protoshare:
+      key: PTS
+      code: PTS
+      name: Protoshare
+      format: '0,0.0000'
+    usd:
+      key: USD
+      code: USD
+      name: Dolar Americano
+      format: '0,0.00'
+  datagrid:
+    empty: Nenhum dado encontrado
+    filters:
+      date:
+        range_separator: " até "
+      datetime:
+        range_separator: " até "
+    form:
+      submit: Pesquisa
+    admin_deposits_grid:
+      columns:
+        sn: SN
+        created_at: as
+        channel_key_text: Canal
+        fund_extra_text: Extra
+        fund_uid: UID
+        txid: TXID
+        amount: Valor
+        fee: Taxa
+        currency_text: Moeda
+        aasm_state_text: Status
+        member_name: Membro
+    bank_deposits_grid:
+      columns:
+        sn: SN
+        created_at: At
+        channel_key_text: Categoria
+        fund_extra_text: Banco
+        fund_uid: Conta
+        amount: Valor
+        fee: Taxa
+        aasm_state_text: Status
+    coin_deposits_grid:
+      columns:
+        sn: SN
+        txid: ID da transação
+        created_at: As
+        amount: Valor
+        aasm_state_text: Status
+        confirmations: Confirma
+    withdraws_grid:
+      columns:
+        sn: SN
+        name: Nome
+        currency_text: Moeda
+        amount: Valor
+        fee: Taxa
+        created_at: Criado as
+        done_at: Completado as
+        state_text: Status
+    members_grid:
+      columns:
+        sn: Número Serial
+        email: Email
+        created_at: Criado as
+        actions: Ações
+    account_versions_grid:
+      columns:
+        created_at: Criado as
+        currency_text: Moeda
+        balance: Saldo
+        in: Entrada
+        out: Saída
+        amount: Valor
+        reason_text: Razão
+        modifiable_type: Link
+        fee: Taxa
+      filters:
+        reason: Razão
+        currency: Moeda
+    statistic_members_grid:
+      columns:
+        sn: Número Serial
+        id: ID
+        email: Email
+        created_at: Criado as
+        activated: Ativo
+        detail: Detalhe
+        action: Ação
+      filters:
+        sn: Número Serial
+        activated: Ativo
+        created_at: Criado as 
+        email: Email
+    statistic_orders_grid:
+      columns:
+        id: Número Serial
+        price: Preço
+        volume: Volume
+        created_at: Criado as 
+        state_text: Status
+        member_id: Membro
+      filters:
+        state: Status
+        currency: Moeda
+        created_at: Criado as
+        type: Venda/Compra
+    statistic_trades_grid:
+      columns:
+        id: ID
+        price: Preço
+        volume: Volume
+        strike_amount: Valor
+        created_at: Criado as
+      filters:
+        currency: Moeda
+        created_at: Criado as
+    statistic_deposits_grid:
+      columns:
+        member: Membro
+        tx_id: TxID
+        amount: Valor
+        currency: Moeda
+        created_at: Criado as
+        state_text: Status
+      filters:
+        currency: Moeda
+        state: Status
+        created_at: Criado as
+    statistic_withdraws_grid:
+      columns:
+        member: Membro
+        address: Endereço
+        amount: Valor
+        currency: Moeda
+        created_at: Criado as
+        state_text: Status
+      filters:
+        state: Status
+        created_at: Criado as
+  deposit_channel:
+    bank:
+      key: Transferência Bancária
+      title: Transferência Bancária
+      intro: Depósitos por Transferência Bancária, recomendado para valores altos
+      latency: 10 minutos
+      transfer: Manual
+      go: Depósito
+    satoshi:
+      key: Block Chain
+      title: Depósitos de Bitcoin
+      intro: Depósito bitcoin de sua própria carteira para sua conta na exchange
+      latency: 1 Confirmação
+      transfer: Manual
+      go: Depósito
+  deposits/bank:
+    aasm_state:
+      submitting: Enviando
+      cancelled: Cancelado
+      submitted: Submetido
+      accepted: Aceito
+      rejected: Rejeitado
+      checked: Checado
+      warning: Alerta
+  private:
+    deposits:
+      satoshis:
+        gen_address:
+          require_transaction: Não posso gerar um novo endereço enquanto o anterior não for utilizado.
+      banks:
+        destroy:
+          notice: Pedido de revogação bem sucessido.
+        create:
+          notice: solicitação de recarga enviada com sucesso. Use as informações abaixo para completar transferência bancária.
+          submit: Submeter
+        new:
+          fund_source: Selecionar fundo de origem
+          manage_fund_source: Gerenciar fundo de origem
+          submit: Submeter
+        edit:
+          bank: Nome do banco de destino
+          branch: Agência de destino
+          hodler: Titular de destino
+          account: conta destino
+    history:
+      transaction:
+        Deposit: Depósito
+        Withdraw: Resgate
+      account:
+        currency: Moeda
+        buy: Comprar
+        sell: Vender
+        filter_by_type: Filtrar por tipo
+        account_history: Histórico da conta
+        type: Tipo
+        timestamp: Data e Hora
+        fee: Taxa
+        currency: Moeda
+        amount: Valor
+        txid: Txid
+      orders:
+        order_history: Histórico de Ordens
+        id: ID
+        type: Tipo
+        state: Status
+        market: Mercado
+        price: Preço
+        volume: Volume
+        average_price: Preço Médio
+        fullfilled_volume: Realizado
+        timestamp: Criado as
+      order:
+        ask: Vender
+        bid: Comprar
+        wait: Aberta
+        cancel: Cancelada
+        done: Confirmada
+      trades:
+        trade_history: Histórico de Negócios
+        side: Tipo
+        created_at: Horário
+        base_currency: Moeda Base
+        base_amount: Valor Base
+        quote_currency: Moeda de cotação
+        quote_amount: Valor transação
+        price: Preço
+      trade:
+        sell: Vender
+        buy: Comprar
+    trade:
+      trades:
+        orders:
+          title: Ordens
+        trades:
+          title: Negócios
+        charges:
+          title: Cargas
+      orders:
+        index:
+          done: Feito
+          cancel: Cancelar
+          confirm: 'Tem certeza que quer cancelar a ordem #%{id}?'
+        destroy:
+          'true': "#%{id} Ordem cancelada com sucesso"
+          'false': "#%{id} Cancelamento de ordem rejeitado"
+    withdraws:
+      update:
+        request_accepted: Solicitação de resgate aceita.
+      destroy:
+        request_canceled: Solicitação de resgate aceita
+      index:
+        fee: taxa
+        total: Total
+        withdraw_history: Histórico de Resgates
+      create:
+        two_factors_error: Autenticação de Dois Fatores falhou.
+      banks:
+        update:
+          notice: Transferência de Resgate foi submetido, vamos processá-la o mais rápido possível
+          alert_two_factor: Erro na Autenticação de dois fatores
+        destroy:
+          notice: Transferência de Resgate foi cancelada, o valor congelado será retornado para sua conta.
+        new:
+          fund_source: Selecionar fundo de Origem
+          manage_fund_source: Gerenciar fundo de Origem
+          submit: Submeter
+          allin: Tudo em
+        create:
+          notice: Solicitação de resgate submetida com sucesso. Use as informações abaixo para completar a transferência bancária.
+      satoshis:
+        destroy:
+          notice: Resgate cancelado, o saldo congelado será retornado para sua conta.
+        update:
+          notice: Solicitação de Resgate foi submetida com sucesso, vamos processá-la o mais rápido possível
+          alert_two_factor: Erro na autenticação de dois fatores
+        new:
+          submit: submeter
+          allin: Tudo em
+          fund_source_label: Rótulo
+          manage_fund_source: Gerenciar fundos de origem
+        create:
+          notice: Solicitação de resgate submetido com sucesso. Use as informações abaixo para completar a transferência bancária.
+    tickets:
+      index:
+        new_ticket: Novo Ticket
+      new:
+        intro: Se tiver algum problema, inicie uma discussão para que nosso staff possa ajudá-lo o quanto antes. Todas as discussões entre você e nosso staff são privadas.
+      ticket_create_succ: Ticket criado com sucesso.
+      ticket_create_fail: Falha ao criar o ticket, por favor tente novamente mais tarde.
+      comment_succ: Comentário com sucesso.
+      cooment_fail: Comentário falhou, Por favor tente de nova mais tarde.
+      me: Eu
+      supporter: Suporte
+      close: Ticket Fechado
+      close_succ: Ticket Fechado com sucesso
+      close_confirm: Você tem certeza que quer fechar este ticket?
+      title_content_both_blank: Título e comentário podem estar vazios.
+      from: De
+      view_closed_tickets: Visualizar tickets fechados
+      view_open_tickets: Visualizar tickets abertos
+    account_versions:
+      index:
+        description: Toda a transação e cada centavo estão documentados de forma exaustiva e segura na exchange.
+    api_tokens:
+      user_tokens:
+        no_token: Você não tem API token.
+        edit: Editar
+        destroy: Destruir
+        destroy-confirm: Você tem Certeza?
+        create: Criar novo Token
+        http: HTTP API Document
+        websocket: Websocket API Document
+        more: 'Para mais informações por favor cheque a seção de API no github:'
+      oauth_tokens:
+        panel_title: Autorizações
+        title: Aplicações Autorizadas
+        oauth: Integração OAuth
+        intro: Gerenciar todas as aplicações autrorizadas.
+        no_token: Sem Aplicações.
+        unbind: Revogar
+        unbind-confirm: Você tem Certeza?
+        oauth_app_name: Nome
+        oauth_app_expire: Expira em
+        oauth_app_scope: Scopes
+      unbind:
+        success: Revogado com Sucesso
+        failed: Falha na revogação.
+      new:
+        label_hint: Rótulo ajuda você a lembrar o uso do Token, opcional.
+      create:
+        alert_two_factor: Autenticação de dois fatores falhou.
+        success: API token criado com sucesso.
+        failed: Falha ao criar API token. Por favor tente de novo mais tarde ou contate o Admin.
+        desc: Por favor copie e cole a chave abaixo para um lugar seguro e salve. A chave secreta nunca será apresentada novamente.
+      edit:
+        access_key_hint: Criado em %{created_at}
+        label_hint: Rótulo ajuda você lembrar do uso do Token, opcional.
+        ip_whitelist_hint: Separar IP por vírgulas, deixar este campo em branco significa que qualquer IP está autorizado.
+      update:
+        alert_two_factor: Autenticação dois fatores falhou.
+        success: Salvo com sucesso.
+        failed: Falha ao salvar o Token. Por favor tente mais tarde ou contate o Admin.
+      destroy:
+        success: O token foi destruido com sucesso.
+        failed: Falha ao destruir o Token.
+    assets:
+      index:
+        liability-proof: Prova das Responsabilidades
+        btc-assets: BTC Ativos
+        cny-assets: BRL Ativos
+      liability_tabs:
+        verify-btc: Verificar meus BTC Ativos
+        verify-cny: Verificar meus BRL Ativos
+        btc-assets-total: 'Total BTC ativos corretora: '
+        cny-assets-total: 'Total BRL ativos corretora: '
+      liability_proof:
+        title: Prova das Responsabilidades
+        intro: Como uma corretora, Nos responsabilizamos pela soma de ativos de nossos clientes (Tanto em Bitcoins quanto em  Dinheiro Real) 
+          que nossos usuários nos confia. Nesta Página, apresentamos nossas responsabilidades. Nós também provemos uma maneira de 
+          verificar o saldo de sua conta, item que faz parte de nossas obrigações e responsabilidades.
+        how-to-verify: Como verificar se uma troca é solvente?
+        how-to-verify-uri: https://peatio.com/documents/liability_proof
+      liability_data:
+        liability-proof-generating: Processo de Geração de Provas de Responsabilidades em progresso, por favor 
+          retorne em 30 minutos.
+        root-json: Root node
+        partial-tree: 'Meus %{currency} Ativos: '
+        get-partial-tree: Get my partial tree data
+        timestamp: A prova de dados é gerada as %{time}.
+        go-verify: Verify
+      btc_assets:
+        title: BTC Ativos
+        intro: Todos os BTCs da corretora estão listados aqui.
+        total: Total BTC Ativos
+        address: Endereço
+      cny_assets:
+        title: BRL Ativos
+        intro: Todos os BRLs da corretora estão listados aqui. 
+        total: Total BRL Ativos
+        description: " <p>Para supervisão, você pode solicitar o saldo de nosso depósito
+          account:</p> <p>Banco: %{bank}</p> <p>Conta： %{address}</p> <p>Consulta
+          Senha： %{password}</p> <p>Consulta Tel.： %{tel}</p>"
+      partial_tree:
+        success: 'Successo! Arquivo de Verificação gerado em: %{timestamp}'
+    funds:
+      show:
+        account_history: Histórico de Conta
+        cny_format: '0.00'
+        btc_format: '0.00000000'
+        reason:
+          cny:
+            strike_add: Mais
+            strike_sub: Menos
+            deposit: Depósito
+            withdraw: Resgate
+            fix: Fix
+          btc:
+            strike_add: Mais
+            strike_sub: Menos
+            deposit: Deposit
+            withdraw: Resgate
+            fix: Fix
+        ref:
+          system: Sistema
+          default: Padrão
+    id_documents:
+      edit:
+        state: Status
+        state_unverified: NÃO VERIFICADO
+        state_verifying: VERIFICANDO
+        state_verified: VERIFICADO
+        name: Nome Real
+        birth_date: Data de Nascimento
+        address: Endereço
+        city: Cidade
+        country: País
+        zipcode: CEP
+        id_document_type: Tipo de Documento
+        id_document_number: Número do Documento
+        id_document_file: "* Foto do Documento"
+        id_bill_type: Comprovante de Residência
+        id_bill_file: "* Foto do Comprovante de Residência"
+        warning: Inclua suas informações pessoais e anexe os documentos solicitados para obter a aprovação de seu cadastro.
+      update:
+        notice: A Verificação de sua conta foi submetida para o Admin.
+    markets:
+      show:
+        error: Falha
+        success: Sucesso
+        analysis_panel: Análises
+        help_panel: Ajuda
+        done: Feito
+        cancel: Cancelar
+        cancel_confirm: Tem certeza que quer cancelar a ordem?
+        confirm: Confirmar
+        ask_order: 'Venda ##sn#'
+        bid_order: 'Compra ##sn#'
+        my_active_order: Ativo
+        my_done_order: Feito
+        trades: Negócios
+        chat: Canal de Chat
+      market_list:
+        all: Todos
+        all_html: "<i class='fa fa-check'></i><span>Todos</span>"
+        usd_html: "<i class='fa fa-check'></i><span>Mercados USD</span>"
+        btc_html: "<i class='fa fa-check'></i><span>Mercados BTC</span>"
+        eth_html: "<i class='fa fa-check'></i><span>Mercados ETH</span>"
+        price: Preço
+        change: "24h %"
+      range_switch:
+        switch_1: 1m
+        switch_5: 5m
+        switch_15: 15m
+        switch_30: 30m
+        switch_60: 1h
+        switch_120: 2h
+        switch_240: 4h
+        switch_360: 6h
+        switch_720: 12h
+        switch_1440: 1d
+        switch_4320: 3d
+        switch_10080: 1s
+      depths:
+        price: Preço
+        amount: Valor
+        buy: Comprar
+        sell: Vender
+        ask_orders: Vender
+        bid_orders: Comprar
+      ticker:
+        last: Último Preço
+        ask: Venda
+        bid: Compra
+      account_balance:
+        title: Extrato de Conta
+        available: Disponível %{currency}
+      bid_entry:
+        action: "Comprar %{currency}"
+        price: Preço
+        last_price: Último Preço
+        amount: Qtde
+        total: Total
+      ask_entry:
+        action: "Vender %{currency}"
+        price: Preço
+        last_price: Último Preço
+        amount: Qtde
+        total: Total
+      place_order:
+        price_high: Alta
+        price_low: Baixa
+        full_bid: Completo
+        full_ask: Vazio
+      order_book:
+        title: Livro de Ordens
+        volume: Volume
+        price: Preço
+        amount: Valor
+        ask: Venda
+        bid: Compra
+        fade_toggle_depth: Mercado
+      trade_state:
+        new: Novo
+        partial: Parcial
+      market_trades:
+        all: Tudo
+        my: Meu
+        all_html: "<i class='fa fa-check'></i><span>Tudo</span>"
+        my_html: "<i class='fa fa-check'></i><span>Meu</span>"
+        time: Hora
+        price: Preço
+        volume: Volume
+      header:
+        network: Status Conexão
+        vol: 24h Volume
+        high: Alta
+        low: Baixa
+        change: Variação
+      settings:
+        sound: Som
+        notification: Notificar
+        funds: "Recursos"
+        signout: "Sair"
+        settings: "Perfil"
+        history: "Histórico"
+      account_summary:
+        title: Resumo
+        account: Conta
+        amount: Valor
+        locked: Bloqueado
+        view_all_accounts: "Ver tudo"
+        hide_all_accounts: "Esconder outros"
+      my_orders:
+        orders_wait: Últimas Ordens
+        orders_done: Ordens completadas
+        orders_cancel: Cancelar ordens
+        no_open_orders: Você não tem ordens abertas.
+        clear_all_html: "<i class='fa fa-trash'></i><span>Cancelar Tudo</span>"
+        clear_bids_html: "<i class='fa fa-trash'></i><span>Cancelar Compras</span>"
+        clear_asks_html: "<i class='fa fa-trash'></i><span>Cancelar Vendas</span>"
+        confirm_clear_all: Você tem certeza que quer cancelar todas ordens?
+        confirm_clear_bids: Você tem certeza que quer cancelar todas as compras?
+        confirm_clear_asks: Você tem certeza que quer cancelar todas as vendas?
+        price: Preço
+        volume: Volume
+        amount: Valor
+        time: Place Hora
+      mask:
+        warning: Por favor <a class=text-up href='/'>Entrar</a> or <a class=text-up
+          href='/'>Entrar</a> para Operar
+      klime_chart:
+        title: Gráficos 
+      global:
+        global_orders_title: Ordens
+        global_trades_title: Negócios
+      chat:
+        title: Canal de Chat
+    settings:
+      success: Configuração atualizadas com sucesso.
+      failure: Senha Inválida. Por favor tente de novo.
+      index:
+        safety_instruction: Para proteger seus bitcoins e informações pessoais, recomendamos fortemente que use a autenticação de dois fatores.
+        reset_password: Reset sua senha
+        reauthenticate: Autenticação
+        activated: Um email foi enviado para seu endereço cadastrado, por gentileza verifique seu email 
+          o mais rápido possível. Se você não o recebeu, clique em "Enviar Novamente"
+        auth-activated: Por favor confirme seu endereço de email  primeiramente.
+        auth-verified: Por favor verifique sua conta primeiramente.
+        email:
+          title: Verificação de E-mail.
+          description: Seu e-mail não foi verificado, clique no botão "Enviar novamente" 
+            para completar a verficação.
+          description-activated: Seu endereço de email foi verificado com sucesso,
+            lembre de proteger este endereço de email, ele é seu certificado para acessar sua conta.
+          resend: Enviar Novamente
+          activated: Verificado
+          go: Set
+        phone_number:
+          title: Número de Telefone
+          description: Inserindo um número de telefone fará sua conta mais segura.
+            Você pode rapidamente redefinir sua senha e suas operações de conta serão
+            notificadas.
+          go: Set
+          verified: Verificado
+          hint: "Número Verificado %{hint}"
+        two_factor_auth:
+          title: Autenticação 2-Fatores
+          description: Autenticação 2-Fatores provê outra camada de segurança para sua conta.
+          enable: Habilitar
+          disable: Desabilitar
+        verification:
+          title: Verificar Conta
+          description: Ajude-nos a manter os maus garotos longe de sua conta usando sua senha.
+          go: Submeter
+          verified: Verificado
+        asset_passwords:
+          title: Senha Ativa
+          description: A senha ativa será necessária quando você resgatar o seu dinheiro.
+            É fortemente recomendável que não utilize a mesma senha de sua conta!
+          go: Set
+        passwords:
+          title: Senha
+          description: Esta senha é necessária para seu Login, Lembre-se dela.
+          go: Mudar Senha
+          set: Set
+        api_tokens:
+          title: API Tokens
+          description: Criar e gerenciar seus API tokens.
+          go: Set
+        weibo:
+          title: Conectar ao Weibo
+          description: Depois de conectar ao Weibo, Você pode se logar via conta Weibo.
+          bound_desc: Conectado como %{nickname}.
+          bind: Conectar
+          unbind: Desconectar
+    otps:
+      new:
+        step_1: Passo 1
+        step_2: Passo 2
+        step_3: Passo 3
+        or: OU
+        download_app: Instale Google Authenticator app em seu celular e abra o aplicativo.
+        scan_qr_code: Escaneie o QR code abaixo
+        enter_passphrase: Entre manualmente a chave abaixo na aplicação
+        enter_passcode: Entre e submeta o código gerado pelo app Google Authenticator.
+    shared:
+      balances:
+        locked: Congelado
+        balance: Saldo
+        available: Disponível
+        title: "%{icon} %{c} Account"
+        cny_format: '0.00'
+        btc_format: '0.00000000'
+        total: Total
+  guides:
+    private:
+      settings:
+        panel: Configurações
+        index:
+          intro: Administre e revise seu perfil.
+      api_tokens:
+        panel: API Tokens
+        index:
+          title: Meus Tokens
+          intro: Listagem de seus API tokens. Uma Lista vazia 'IP Whitelist' significa que qualquer IP pode utilizar este token.
+        new:
+          title: Criar API Token
+        create:
+          title: Criar API Token
+        edit:
+          title: Editar API Token
+        update:
+          title: Editar API Token
+      tickets:
+        panel: Tickets
+      id_documents:
+        panel: Cadastro de Informações do Titular 
+        new:
+          title: Sbmeter informação de nome real para Autenticação
+          intro: Em linha com as leis, verificação de identidade é obrigató        Por favor verifique sua conta para proceder.
+    panels:
+      balance: Conta
+    verify:
+      google_auths:
+        panel: Autenticação Dois-Fatores
+        edit:
+          title: Desabilitar Autenticação Dois-Fatores
+          intro: Se você trocar de telefone celular, Você pode desabilitar a autenticação dois-fatores no telefone antigo, e habilitá-lo no novo aparelho.
+      sms_auths:
+        panel: Verificar número de Telefone
+    reset_passwords:
+      panel: Senha
+      new:
+        title: Alterar Senha
+        intro: Por favor entre com seu email indicado em sua conta,
+          entre o código de verificação, e entre no sistema, siga as instruções para alterar sua senha.
+      create:
+        title: Alterar senha
+        intro: Por favor entre seu endereço de email de sua conta,
+          entre com o código de verificação, e entre em sua conta, siga as instruções para alterar sua senha.
+      edit:
+        title: Alterar Senha
+      update:
+        title: Alterar Senha
+    sessions:
+      panel: Entrar
+      new:
+        title: Entrar em Minha Conta
+        intro: Entrar na exchange agora para efetuar compras e vendas.
+      failure:
+        title: Entrar em Minha Conta
+        intro: Entrar na exchange agora para efetuar compras e vendas.
+    identities:
+      panel: Criar Conta
+      new:
+        title: Criar Minha Conta
+        intro: Este será seu único ID na exchange que será necessário para que possa realizar seus negócios, depósitos e resgates. Por favor preencha com cuidado.
+      edit:
+        panel: Minha Conta
+        title: Alterar Senha
+    two_factors:
+      panel: Autenticação de Dois-Fatores
+  simple_form:
+    placeholders:
+      deposit:
+        bank:
+          amount: Quantia mínima 100
+      session:
+        email: Endereço de email
+        password: Senha
+      identity:
+        email: Exemplo：xiaobai@example.com
+        password: Por favor defina sua senha de entrada
+        password_confirmation: Confirme sua Senha
+        edit:
+          password: Por favor defina sua senha da conta!
+      document:
+        key: URL link para Documento 
+        title: Tipo de Documento
+      order_bid:
+        origin_volume: Volume de Compra
+        sum: Soma
+      order_ask:
+        origin_volume: Volume de Venda
+        sum: Volume de Negócios Total
+      reset_password:
+        email: por exemplo：xiaobai@example.com
+        password: Por favor defina sua senha de entrada!
+      withdraw:
+        bank:
+          sum: Quantia Mínima 100
+        satoshi:
+          sum: Quantia Mínima 0.001
+          fund_extra: Entre o rótulo para este endereço (opcional) 
+    hints:
+      deposit:
+        bank:
+          sum: "<a target='_balance' href='#'>Estrutura de Taxas</a>"
+          member_name: "<span class='text-danger'>Nome do Titular da Conta Corrente deve coincidir com o nome real cadastrado</span>"
+          sn: "<span class='text-danger'>Por favor informe seu código de transação (transferência) para facilitar a identificação de sua transferência.</span>"
+      two_factor:
+        otp_secret: Recomendamos que você faça backup de imagem do código QR ​​ou texto cifrado para evitar
+          que a perda acidental do telefone gere inconveniente.
+        otp: Seu validador vai voltar a gerar uma nova senha a cada trinta segundos ,
+          agradar a entrada oportunamente.
+      identity:
+        password: Definir uma senha que tenha pelo menos 6 caracteres e é melhor
+          que contenha letras e números maiúsculas e minúsculas.
+      reset_password:
+        password: Definir uma senha que tenha pelo menos 6 caracteres e é melhor
+          que contenha letras e números maiúsculas e minúsculas.
+      id_document:
+        name: Por favor, preencha o nome que seja consistente com seus documentos.
+        id_bill_file: Envie seu comprovante de endereco digitalizado. Ele é obrigtorio
+          para aprovacao do seu cadastro. Os formatos aceitos 
+          são jpg, pdf, png ou gif com arquivos de até 3MB tamanho. 
+        id_document_file: Envie seu RG, Carteira de Habilitacao ou Passaporte digitalizado, com frente 
+          e verso, para aprovacao do seu cadastro. Os formatos aceitos são jpg, pdf, png ou gif
+          com arquivos de até 3MB tamanho.
+      withdraw:
+        bank:
+          member_name: "<span class='text-danger'>Titular da conta de resgate deve coincider com nome real utilizado em seu cadastro</span>"
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+          fund_extra: Se seu banco não está apresentado nesta lista, entre em contato conosco.
+        satoshi:
+          sum: "<a target='_balance' href='#'>Estrutura de Taxas</a>"
+    creating: Criando...
+    updating: Atualizando...
+    buttons:
+      or: Ou
+      cancel: Cancelar
+    'yes': 'Sim'
+    'no': 'Não'
+    required:
+      text: Obrigatório
+      mark: "*"
+    error_notification:
+      default_message: 'Por favor revise os problemas abaixo:'
+    labels:
+      defaults:
+        title: Título
+      google_auth:
+        uri: QR code
+        otp_secret: Texto Cifrado
+        otp: Senha no Autenticador
+      fund_source:
+        label: Rótulo
+        address: Endereço
+        category: Categoria
+      session:
+        email: Email Cadastrado
+        password: Senha de Entrada
+        captcha: Captcha
+      identity:
+        email: Email Cadastrado
+        old_password: Senha Original
+        password: Nova Senha
+        password_confirmation: Confirmar nova senha
+      reset_password:
+        password: Nova Senha
+      ticket:
+        content: Mais detalhes
+      withdraw:
+        bank:
+          fund_extra: Banco
+          sum: Quantia
+          account_balance: Saldo da Conta
+          member_name: Nome do Titular da Conta
+        satoshi:
+          fee: Taxa
+          sum: Quantia
+          fund_uid: Endereço Bitcoin
+          fund_extra: Rótulo
+          account_balance: Saldo de Conta
+          member_name: Conta
+  admin:
+    deposits:
+      banks:
+        index:
+          oneday: Pedidos das últimas 96 horas 
+          available: Todos pedidos pendentes
+        show:
+          alert: Recarga não pode ser localizada.
+          notice: A recarga foi bem sucedida.
+          deposit: Pedido de Depósito
+          accept: Aceitar
+          target_deposit: Transferência Bancária
+          confirm: Confirma recarga?
+        update:
+          blank_txid: TxID não pode ser Branco
+      satoshis:
+        update:
+          notice: Depósito feito com sucesso.
+        index:
+          accept: Aceitar
+          accept_confirm: Confirmar depósito?
+    tickets:
+      view: Visão
+      close:  Ticket Fechado
+      comments_count: Contagem de Comentários
+      replies: Respostas
+      open_tickets: Tickets Abertos
+      closed_tickets: Tickets Fechados
+    members:
+      index:
+        search: Pesquisa
+        members: Membros
+        email: Email
+        name: Nome
+        phone: Número de Telefone
+        wallet_address: Endereço da Carteira
+      show:
+        member_title: Informações de Usuário
+        actions_title: Ações
+        accounts_title: Informações da Conta
+        account_versions_title: Registros
+    dashboard:
+      index:
+        accounts_title: Resumo da Conta
+        daemons_title: Resumo do Sistema
+    documents:
+      index:
+        new: Novo Documento
+    statistic:
+      filter: Filtro
+      summary: Resumo
+      click-to-expand: Expandir
+      members:
+        show:
+          table: Resultados
+      orders:
+        show:
+          avg: Média
+          sum: Volume de Ordens
+          sum_strike: Por Volume
+          count: Contador
+      trades:
+        show:
+          count: Transações
+          volume: Volume
+          amount: Quantia Total
+          min_price: Preço Mínimo
+          max_price: Preço Máximo
+          avg_price: Preço Médio
+          amount_fee: Taxa da Transação
+          volume_fee: Taxa Total
+      deposits:
+        show:
+          count: Total
+          amount: Quantia Total
+      withdraws:
+        show:
+          count: Total
+          amount: Quantia total
+          fee: taxa
+    withdraws:
+      banks:
+        index:
+          one: Ordens de resgates pendentes
+          all: ordens Vinte e Quatro Horas
+          empty: Sem Informação
+        show:
+          process: Processar
+          succeed: Confirmar
+          reject: Rejeitar
+          succeed_confirm: Processar Confirmação?
+          reject_confirm: Confirma rejeição?
+          withdraw: Resgate
+          empty: Sem Informações
+      satoshis:
+        index:
+          one: Resgates Pendentes
+          all: Últimas 96 Hs
+          empty: Sem Informações
+        show:
+          process: Processar
+          succeed: Confirmar
+          reject: Rejeitar
+          succeed_confirm: Processar Resgate?
+          reject_confirm: Resgate rejeitado?
+          withdraw: Resgates
+  deposits/satoshi:
+    aasm_state:
+      submitted: Enviado
+      accepted: Aceito
+      checked: Selecionado
+      warning: Atenção
+  doorkeeper:
+    scopes:
+      profile: Ler seus dados básicos de cadastro (ex. nome, email) e saldo das contas
+      history: Ler seu histórico de trades
+      trade: Enviar e cancelar ordens
+    authorizations:
+      new:
+        title: Formulário de Autorização
+        authorize_html: Autoriza <strong class='text-info'>%{name}</strong> a usar
+          sua conta?
+        scopes: 'Esta autorização irá permitir que:'
+        authorize: Autorizado
+        deny: Negado
+    errors:
+      messages:
+        invalid_request: Está faltando um parâmetro na requisição, a requisição inclui um parâmetro não suportado
+          ou ele está mal formatado.
+        invalid_redirect_uri: A URI de redirecionamento não é válida.
+        unauthorized_client: O cliente não está autorização a executar essa requisição usando este método.          
+        access_denied: O dono da recurso ou o servidor de autorização recusaram a requisição.
+        invalid_scope: O escopo da requisição é inválido, desconhecido ou mal formatado.
+        server_error: O servidor de autorização encontrou uma condição inesperada n
+          que não permite a conclusão da requisição.
+        temporarily_unavailable: O servidor de autorização não está disponível para tratar
+          a requisição devido a sobrecarga ou manutenção do servidor.
+        credential_flow_not_configured: Resource Owner Password Credentials flow failed
+          due to Doorkeeper.configure.resource_owner_from_credentials being unconfigured.
+        resource_owner_authenticator_not_configured: Resource Owner find failed due
+          to Doorkeeper.configure.resource_owner_authenticator being unconfiged.
+        unsupported_response_type: O servidor de autorização não suporta esse tipo de resposta.
+        invalid_client: A autenticação do cliente falhou devido a cliente desconhecido, sem autenticação de cliente fornecida ou método de autenticação não suportado.
+        invalid_grant: A autorização fornecida não é válida, está expirada, removida, não é a mesma fornecida na URI de redirecionamento, ou
+          foi emitida para outro cliente.
+        unsupported_grant_type: O tipo de autorização não é suportado pelo servidor de autorizações.
+        invalid_resource_owner: As credenciais do proprietário dos recursos fornecidos não são válidas
+          ou o proprietário dos recursos não pode ser encontrado
+        invalid_token:
+          revoked: O token de acesso foi revogado
+          expired: O token de acesso está expirado
+          unknown: O token de acesso é inválido
+    flash:
+      applications:
+        create:
+          notice: Requisição criada.
+        destroy:
+          notice: Requisição excluída.
+        update:
+          notice: Requisição atualizada.
+      authorized_applications:
+        destroy:
+          notice: Requisição revogada.
+  easy_table:
+    satoshi:
+      amount: Quantidade
+      txid: TxId
+      created_at: Criado em
+      confirmations: Confirmações
+      member_name: Assinante
+      state_and_actions: Status/Ações
+      currency_obj_key_text: Moeda
+    bank:
+      sn: SN
+      amount: Quantidade
+      created_at: Em
+      fund_source: Origem do recurso
+      memo: Memo
+      member_name: Assinante
+      state_and_actions: Status/Ação
+      currency_obj_key_text: Moeda
+  enumerize:
+    account_version:
+      reason:
+        fix: FIX
+        unknown: DESCONHECIDO
+        strike_add: TRADE PLUS
+        strike_sub: TRADE SUB
+        strike_fee: TRADE FEE
+        strike_unlock: DESBLOQUEAR TRADE
+        order_cancel: CANCELAR ORDEM
+        order_submit: ENVIAR ORDEM
+        deposit: DEPÓSITO
+        withdraw: SAQUE
+        withdraw_lock: BLOQUEAR SAQUE
+        withdraw_unlock: DESBLOQUEAR SAQUE
+    state:
+      done: Concluído
+      wait: Aguarde
+      cancel: Cancelar
+    currency:
+      cny: BRL
+      btc: BTC
+    order:
+      state:
+        done: CONCLUÍDO
+        wait: AGUARDE
+        cancel: CANCELAR
+    deposit:
+      aasm_state:
+        submitted: Enviado
+        submitting: Enviando
+        accepted: Confirmado
+        cancelled: Cancelado
+        rejected: Rejeitado
+        checked: Marcado
+        warning: Alerta
+    withdraw:
+      state:
+        submitting: Enviando
+        submitted: Enviado
+        rejected: Rejeitado
+        accepted: Aceito
+        suspect: Suspeito
+        processing: Processando
+        done: Concluído
+        canceled: Cancelado
+    fund_source:
+      category:
+        satoshi: Bitcoin
+        bank: Banco
+    id_document:
+      id_document_type:
+        id_card: RG (Selfie com o RG - Legível)
+        passport: Passaporte (Selfie com o Passaporte - Legível)
+        driver_license: Carteira de Motorista (Selfie com a CNH - Legível)
+      id_bill_type:
+        bank_statement: Comprovante de Residência (Extratos Bancários)
+        tax_bill: Comprovante de Residência (Contas de Consumo)
+  views:
+    pagination:
+      first: "&laquo; Primeiro"
+      last: Último &raquo;
+      previous: "&lsaquo; Anterior"
+      next: Próximo &rsaquo;
+      truncate: "..."
+
+  mailer:
+    dear_user: Caro usuário,
+    signature: Obrigado,<br/>Equipe Peatio
+    please_contact: Se não é você, por favor <a href='mailto:%{contact_mail}'>entre em contato conosco</a> o mais rápido possível.
+    footer: Este é um email gerado automaticamente, por favor não responda. Se você tem alguma dúvida, por favor <a href="mailto:%{contact_mail}">entre em contato conosco</a>.
+  comment_mailer:
+    admin_notification:
+      subject: "[PEATIO] O usuário respondeu um ticket"
+      notification_content: O usuário %{email} respondeu um ticket, por favor acesse o link abaixo para verificar os detalhes
+    user_notification:
+      subject: "[PEATIO] Seu ticket possui uma nova resposta"
+      notification_content: 'Seu ticket foi respondido, por favor acesso o link abaixo para ver os detalhes:'
+  deposit_mailer:
+    accepted:
+      subject: "[PEATIO] Seu depósito foi creditado em sua conta"
+      content: Seu depósito de %{currency} foi creditado em sua conta.
+  member_mailer:
+    notify_signin:
+      subject: "[PEATIO] Você acabou de entrar no sistema"
+      just_signed_in: Você acabou de entrar no sistema.
+    google_auth_activated:
+      subject: "[PETIO] Google authenticator habilitado"
+      google_auth_activated: Você habilitou o Google authenticator com sucesso
+    google_auth_deactivated:
+      subject: "[PEATIO] Google authenticator desativado"
+      google_auth_deactivated: Você desativou o Google authenticator com sucesso
+    sms_auth_activated:
+      subject: "[PEATIO] Autenticação via SMS ativada"
+      sms_auth_activated: Sua autenticação via SMS foi ativada com sucesso
+    sms_auth_deactivated:
+      subject: "[PEATIO] Autenticador via SMS desabilitado"
+      sms_auth_deactivated: Sua autenticação via SMS foi desativada com sucesso
+    reset_password_done:
+      subject: "[PEATIO] Sua senha foi alterada"
+      successful: Sua senha foi alterada com sucesso.
+    phone_number_verified:
+      subject: "[PEATIO] Seu número de telefone foi validado"
+      verified: 'Seu número de telefone foi validado: %{phone_number}'
+  system_mailer:
+    daily_stats:
+      member_stats: Statísticas do assinante
+      signup: Assinatura
+      activation: Ativação
+      asset_stats: Assets Changes
+      trade_stats: Trades Changes
+      asset_value_change_total: Digital Assets Changes Total
+      trades_change_total: Trades Changes Total
+  ticket_mailer:
+    admin_notification:
+      subject: "[PEATIO] Novo ticket criado"
+      admin_notification_content: O usuário %{email} criou um novo ticket, por favor acesse o link abaixo para verificar os detalhes
+    author_notification:
+      subject: "[PEATIO] Obrigado por entrar em contato"
+      thanks_for_submit_ticket: Obrigado por entrar em contato conosco, nós retornaremos o mais rápido possível.
+  token_mailer:
+    activation:
+      subject: "[PEATIO] Ativação de cadastro"
+      click_to_verify: 'Obrigado por se cadastrar, por favor acesse este link para validar seu email:'
+      unable_to_click: Copie e cole este link em seu navegador se você não puder acessá-lo diretamente.
+      link_expire: Este link perderá a validade em 30 minutos.
+    reset_password:
+      subject: "[PEATIO] Por favor troque sua senha"
+      hi: Olá,
+      follow_the_link: 'Por favor, aguarde esse link para efetuar o reset de sua senha em 30 min:'
+  withdraw_mailer:
+    submitted:
+      subject: "[PEATIO] Atualização do status do seu saque"
+      content: Sua requisição de saque de %{currency} foi gerada com sucesso. Concluiremos sua solicitação o mais rápido possível. Por favor aguarde. Entre em contato conosco caso tenha alguma dúvida.
+    processing:
+      subject: "[PEATIO] Atualização do status do seu saque"
+      content: Sua requisitção de saque de %{currency} está em processamento. Por favor aguarde. Entre em contato conosco caso tenha alguma dúvida.
+    done:
+      subject: "[PEATIO] Atualização do status do seu saque"
+      content: Sua requisição de saque de %{currency} foi concluída. Por favor confira. Entre em contato conosco caso tenha alguma dúvida.
+    withdraw_state:
+      subject: "[PEATIO] Atualização do status do seu saque"
+      your_state: 'Status do seu saque: '
+
+  'true': true
+  'false': false
+  view_on_github: View on Github
+  slogan: An open-source crypto-currency exchange for world.
+  tags:
+    vip: VIP
+    hero: Hero Member
+    admin: Administrador
+  trade:
+    markets: Mercado
+    realtime_price:
+      title: Preço em tempo real
+    account_balance:
+      title: Saldo
+  gon:
+    ask: Venda
+    bid: Compra
+    brand: PEATIO Exchange
+    notification:
+      title: PEATIO Exchange
+      enabled: Notificação habilitada.
+      new_trade: "%{kind} order#%{id} executada à %{price} %{quote_unit} por %{volume} %{base_unit}。"
+  back: Voltar
+  invalid_password: Senha inválida
+  all: Todos
+  date:
+    formats:
+      date-short: "%m-%d"
+      short: "%m-%d %H:%M"
+      default: "%m/%d/%Y %H:%M"
+  time:
+    formats:
+      date-short: "%m-%d"
+      short: "%m-%d %H:%M"
+      default: "%m/%d/%Y %H:%M"
+  sms:
+    verification_code: 'O código de verificação do seu telefone é: %{code}.'
+    password_changed: Olá %{email}, a troca de sua senha foi concluída com sucesso.
+    deposit_done: Olá %{email}, sua requisição de depósito foi concluída.
+    withdraw_done: Olá %{email}, sua requisição de saque foi concluída.
+  header:
+    home: Início
+    dashboard: Dashboard
+    admin: Painel de administração
+    market: Negócios
+    settings: Perfil
+    signin: Login
+    signout: Sair
+    signup: Assinar
+    login_via_weibo: Login via Weibo
+    funds: Recursos
+    getstart: Comprar e vender
+    assets: Solvência
+    history: Histórico
+    order_history: Histórico de ordens
+    trade_history: Histórico de transações
+    account_history: Histórico da conta
+    my_profile: Meu cadastro
+    tickets: Tickets
+    account_balance: Total de ativos
+    back: Voltar
+    total: Total
+    deposit: Deposito
+    withdraw: Saque
+  admin_header:
+    deposits: Depósitos
+    withdraws: Saques
+    statistics: Estatisticas
+    id_documents: Verificar Contas
+  footer:
+    about: Sobre
+    privacy: Privacidade
+    contact: entre em contato conosco
+    price: Preço
+    liability_proof: Termo de responsabilidade
+  actions:
+    go: Gravar
+    submit: Gravar
+    deposit: Depósito
+    select: Selecione por favor
+    unlock: Desbloquear
+    confirm: Confirmar
+    back: Voltar
+    block: view in block
+    destroy: Excluir
+    destroy_confirm: Você confirma que quer excluir?
+    detail: Detalhes
+    publish: Publicar
+    edit: Editar
+    preview: Preview
+    close: Fechamento
+    cancel: Cancelar
+    view: View
+    member: Associado
+    transact: Transação
+    reject: Rejeitado
+    clipboard:
+      click: Clique para copiar
+      done: Copiado
+  chart:
+    open: Abertura
+    high: Maior
+    low: Menor
+    close: Fechamento
+    price: Preço
+    volume: Volume
+    candlestick: 'Barras'
+    line: 'Linha'
+    minute: m
+    hour: Hora
+    day: Dia
+    week: Semana
+    month: Mês
+    year: Ano
+    zoom: Zoom
+    ask: Venda
+    bid: Compra
+    depth: Depth
+    depth_title: Market Depth
+  'yes': 'Sim'
+  'no': 'Não'
+  simple_captcha:
+    label: Atualize a página para obter um novo captcha.
+    placeholder: digite os caracteres da imagem
+  helpers:
+    action:
+      view: Visualizar	
+      customer_service: entre em contato conosco
+    submit:
+      order_ask:
+        create: Venda
+      order_bid:
+        create: Compra
+      document:
+        create: Criar o documento
+        update: Atualizar o documento
+        destroy: Excluir o documento
+      member:
+        update: Abrir a conta
+      identity:
+        save: Sign in
+        create: Sign up
+        destroy: Sign out
+        verify: Verificar
+        update: Trocar
+      two_factor:
+        create: Verificar
+        update: Ativar
+      reset_two_factor:
+        create: Trocar o duplo-fator de autenticação
+      reset_password:
+        update: Trocar a senha
+        create: Trocar a senha
+      fund_source:
+        create: Gravar
+      deposit:
+        create: Depósito
+      id_document:
+        create: Gravar
+      withdraw:
+        create: Gravar
+      ticket:
+        create: Gravar
+  activations:
+    new:
+      notice: Um email foi enviado para sua caixa postal, por favor verifique o mais rápido possível. Se você não receber, por favor clique no botão "enviar novamente".
+      verified: Seu endereço de email foi verificado com sucesso.
+      login_required: login obrigatório!
+      tip: Link de ativação enviado para o email %{email}
+      spam: Por favor verifique se o email de ativação não está em sua pasta de spam.
+    edit:
+      notice: Sua conta foi ativada com sucesso! Por favor, faça seu login abaixo.
+      alert: Link de ativação expirou ou é inválido.
+  authentications:
+    emails:
+      new:
+        title: Caixa Postal
+        setup_email: Por favor informe seu endereço de email.
+        warning: Por favor, verifique sua caixa de entrada depois de guardar o endereço de email.
+        email_address: Endereço de email
+        save: Gravar
+    weibo:
+      destroy:
+        last_auth_alert: Você não pode excluir sua última autenticação
+        unbind_success: Desvincular do Weibo
+    identities:
+      new:
+        title: Cadastrar uma senha
+        save: Gravar
+      create:
+        success: Senha atribuida com sucesso
+  forum:
+    index:
+      notice:
+        display_name: Por favor cadastre como você quer ser chamado.
+  identities:
+    new:
+      title: Novo cadastro
+      signin: Login
+      password: Por favor digite uma senha com no mínimo 6 caracteres e é mais seguro se ela possuir maiúsculas, minúsculas e números.
+    update:
+      auth-error: A senha que você digitou está incorreta, por favor, redigitar.
+      auth-same: A senha que você digitou é a mesma que sua senha anterior, por favor, redigitar.        
+      notice: Senha atualizada com sucesso.
+  layouts:
+    admin:
+      menus:
+        sections:
+          members: Associados
+          deposits: Depósitos
+          sites_statistics: Analytics
+          operating: Operações
+        items:
+          operating:
+            proofs: Provas
+            deposits: Depósitos
+            documents: Documentos
+            withdraws: Saques
+            tickets: Chamados
+          deposits:
+            currency: Depósito
+    application:
+      close: Fechar
+    meta:
+      page_title: PEATIO - A Melhor Exchange de Bitcoins
+      page_description: PEATIO - A Melhor Exchange de Bitcoins
+      page_keywords: PEATIO,Opensource,Exchange,Cryptocurrency
+  members:
+    edit:
+      name: Por favor, preencher o formulário.
+  reset_passwords:
+    create:
+      success: Um email com as instruções para trocar sua senha foi enviado para seu endereço. Se você não receber, procure primeiro em seu "junk mail ", ou solicite novamente o envio.
+    edit:
+      password: Por favor digite uma senha com no mínimo 6 caracteres e é mais seguro se ela possuir maiúsculas, minúsculas e números
+      invalid: Requisição inválida
+      submit: Trocar a senha de login
+      alert: Link de reset de senha inválido.
+    update:
+      success: Sua nova senha foi confirmada, por favor utilize esta senha a partir de agora.
+      invalid: Requisição inválida
+  sessions:
+    new:
+      reset_password: Esqueceu sua senha?
+    new_with_two_factor_auth:
+      title: 2 passo de verificação
+      reset_two_factor: Perdeu seu aparelho de dupla-autenticação
+    create_with_two_factor_auth:
+      session_expired: Seção expirada. Tente novamente.
+    create:
+      error: Sua conta foi desabilitada, entre em contado com nosso suporte se você estiver com algum problema .
+    failure:
+      account_locked: Muitas tentativas de acesso incorretas. Para assegurar a segurança de sua 
+        conta, nós bloquemos seu cadastro. Para desbloquear, redefina sua senha clicando 
+        em "Esqueceu sua senha".
+      error: Identificação de associado ou senha incorreta, por favor tente novamente.
+  shared:
+    admin:
+      member:
+        member_info: Informações do associado
+        deactive_sms_two_factor: SMS TFA
+        deactive_app_two_factor: Google TFA
+        inactive: Inativo
+        deactive: Desabilitar
+        are_you_sure: Confirma que deseja desabilitar o duplo-fator de autenticação?
+      account:
+        account_info: Informações da conta
+        payment_address: Endereço de depósito
+    alert:
+      modern: Para não afetar sua experiência de uso, por favor utilize um browser mais novo, 
+        nós recomendamos o <a target='_blank' href='https://www.google.com/#q=google+chrome'>Google
+        Chrome</a>。
+      pusher_unavailable: A conexão com a rede está temporariamente indisponível... <a
+        href='#' class='alert-link'>Por favor, atualize</a>.
+    header:
+      balance: Saldo
+    header_account_balance:
+      locked: Bloqueado
+    market:
+      ticker:
+        ask_price: Venda
+        bid_price: Compra
+        high_price: Maior
+        low_price: Menor
+        volume: Volume
+        latest_price: Último
+    frame:
+      deposit_now: Depositar agora
+  two_factors:
+    index:
+      verify: Verificar
+    update:
+      alert: Código de dupla-autenticação inválido, por favor redigite
+    auth:
+      please_active_two_factor: Por favor, registre seu número de celular ou google authenticator primeiro.
+      submit: Enviar
+      otp_placeholder: Senha de 6 dígitos
+      google_app: Google Authenticator
+      sms: Mensagem de verificação SMS
+      send_code: Enviar código
+      send_code_alt: Reenviar in COUNT seguntos
+      hints:
+        app: Google Authenticator irá gerar numa nova senha a cada vinte seguntos, por favor digite dentro deste intervalo.
+        sms: Nós enviaremos uma mensagem de texto para seu telefone com o código de verificação.
+  verify:
+    google_auths:
+      edit:
+        submit: Desabilitar
+        warning: 'Dica: Se você perder seu duplo-fator de autenticação por algum motivo e não puder acessar
+          sua conta na exchange, por favor entre em contato com nosso serviço de suporte.'
+      show:
+        step-1: Passo 1
+        step-2: Passo 2
+        step-3: Passo 3
+        or: OU
+        download-app: Instale o aplicativo Google Authenticator no seu smartfone e depois inicie o aplicativo.
+        guide-link: "<a href='https://support.google.com/accounts/answer/1066447'
+          target='_blank'>Installation Instructions</a>。"
+        scan-qr-code: Scaneie o seguinte QR code com seu aplicativo Google Authenticator，or
+          adicione o texto de criptografia para efetuar a validação manual.
+        enter-passcode: Preencha a senha dinâmica exibida por seu celular para ativar o duplo-fator de autenticação.
+        submit: Ativar
+        ios: Iphone iOS
+        android: Android
+        blackbery: Blackberry
+        notice:
+          already_activated: O Google Authenticator já foi configurado.
+          not_activated_yet: O Google Authenticator ainda não foi configurado.
+      update:
+        alert: Senha incorreta, por favor redigitar.
+        notice: Duplo-fator de autenticação ativado com sucesso.
+        sms_two_factor_error: Código de verificação SMS incorreto, por favor redigitar
+      destroy:
+        alert: Senha incorreta, por favor redigitar.
+        notice: Duplo-fator de autenticação desativado com sucesso.
+    sms_auths:
+      show:
+        title: Verificação de número de telefone
+        description: Informar um número de telefone tornará sua conta mais segura. Você poderá resetar rapidamente sua senha e receberá
+          notificações sobre suas movimentações.
+        warning: não será possível recuperar sua senha se não for informado o número de telefone          
+        phone_number: Número de telefone
+        send_code: Enviar código
+        send_code_alt: Reenviar em COUNT segundos
+        input_otp: Digite o código de 6 dígitos que nós enviamos para você
+        submit: Gravar
+        notice:
+          send_code_success: Código de verificação enviado
+          otp_success: Código de verificação validado.
+          already_activated: Seu número de telefone foi ativado.
+        alert:
+          phone_number_error: Erro no número do telefone
+  withdraw_channel:
+    bank:
+      key: Transferência Bancária
+      title: Transferência Bancária
+      intro: Depósito via transferência bancária, recomendado para grandes recargas
+      latency: 30 minutos
+      transfer: Manual
+      go: Saque
+    satoshi:
+      key: Blockchain
+      title: Bitcoin Blockchain
+      intro: Retirada de Bitcoin para sua carteira própria de Bitcoins
+      latency: 30 minutos
+      transfer: Manual
+      go: Saque
+  withdraws:
+    invalid_address: não é válido. Você não pode efetuar saque para este endereço.
+  withdraws/bank:
+    aasm_state:
+      submitting: Enviando
+      submitted: Enviado
+      rejected: Rejeitado
+      accepted: Aceito
+      suspect: Suspeito
+      processing: Processando
+      done: Concluído
+      almost_done: Quase concluído
+      canceled: Cancelado
+      failed: Falha
+  withdraws/satoshi:
+    aasm_state:
+      submitting: Enviando
+      submitted: Enviado
+      rejected: Rejeitado
+      accepted: Aceito
+      suspect: Suspeito
+      processing: Processando
+      done: Concluído
+      almost_done: Quase concluído
+      canceled: Cancelado
+      failed: Falha
